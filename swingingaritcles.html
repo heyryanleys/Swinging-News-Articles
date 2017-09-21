@@ -87,6 +87,53 @@
     #rightlowerrightbrace{
       left: 92%;
     }
+
+    #righttopbrace,
+    #lefttopbrace{
+      position: absolute;
+      top: 5%;
+      width: 9%;
+      height: 8%;
+      background-color: #5e5e5e;
+
+    }
+
+    #lefttopbrace{
+      left: 5.5%;
+      -ms-transform: rotate(-50deg); /* IE 9 */
+      -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
+      transform: rotate(-50deg);
+    }
+
+    #righttopbrace{
+      left:86%;
+      -ms-transform: rotate(50deg); /* IE 9 */
+      -webkit-transform: rotate(50deg); /* Chrome, Safari, Opera */
+      transform: rotate(50deg);
+
+    }
+
+    #article1,
+    #article2,
+    #article3{
+      position: absolute;
+      width: 20%;
+      height: 50%;
+      top: 20%;
+      background-color: pink;
+    }
+
+    #article1{
+      left: 15%;
+    }
+
+    #article2{
+      left: 40%;
+    }
+
+    #article3{
+      left: 65%;
+    }
     </style>
   </head>
   <body>
@@ -94,6 +141,10 @@
       <div id="whitebottombar">
       </div>
       <div id="frame">
+        <div id="lefttopbrace">
+        </div>
+        <div id="righttopbrace">
+        </div>
         <div id="topbar">
         </div>
         <div id="leftlowerleftbrace">
@@ -108,7 +159,13 @@
         </div>
         <div id="rightbar">
         </div>
-
+          <!-- Content Starts -->
+        <div id="article1">
+        </div>
+        <div id="article2">
+        </div>
+        <div id="article3">
+        </div>
       </div>
     </div>
   </body>
