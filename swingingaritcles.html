@@ -8,26 +8,35 @@
       position: relative;
       width: 1000px;
       height: 2000px;
-      background-color: red;
+      background-color: white;
     }
+
     .main{
       position: absolute;
       width: 1000px;
       height: 600px;
-      background-color: blue;
+      background-color: white;
     }
 
     .whitebottombar{
       position: absolute;
-      top: 80%;
+      top: 90%;
       width: 100%;
-      height: 20%;
-      background-color: green;
+      height: 10%;
+      background-color: white;
+    }
+
+    .whitesidebar{
+      position: absolute;
+      width: 15%;
+      left: -10%;
+      height: 100%;
+      background-color: white;
     }
 
     .frame{
       position: absolute;
-      border: 2px solid white;
+      border: 0px solid white;
       left: 5%;
       bottom: 10%;
       width: 90%;
@@ -54,7 +63,7 @@
       position: absolute;
       width: 100%;
       height: 5%;
-      background-color: grey
+      background-color: grey;
     }
 
     .leftlowerrightbrace,
@@ -123,7 +132,7 @@
       width: 100%;
       height: 1%;
       top: 2%;
-      background-color: #c6c2c2;
+      background-color: #f4ac70;
     }
 
     .article1,
@@ -132,8 +141,16 @@
       position: absolute;
       width: 20%;
       height: 50%;
-      background-color: pink;
+      background-color: #E3E3E3;
     }
+
+    .article1:hover,
+    .article2:hover,
+    .article3:hover{
+      border: 2px solid #f58220;
+      transition: all 0s
+    }
+
 
     .article1.flyin{
       left: 15%;
@@ -249,6 +266,26 @@
       border-radius: 25%;
     }
 
+    .articleimage{
+      position: absolute;
+      background-color: #5e5e5e;
+      width: 85%;
+      left: 7.5%;
+      height: 40%;
+      top: 10%;
+    }
+
+    .articletext{
+      position: absolute;
+      width: 85%;
+      left: 7.5%;
+      height: 40%;
+      top: 52%;
+    }
+
+    .articletext a{
+      color: #f58220;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
@@ -270,11 +307,8 @@
     </script>
   </head>
   <body>
-    <div class="makescroll">
-    </div>
+    <div class="makescroll"></div>
     <div class="main">
-      <div class="whitebottombar">
-      </div>
       <div class="frame">
         <div class="lefttopbrace">
         </div>
@@ -297,13 +331,19 @@
         <div class="chain">
         </div>
           <!-- Content Starts -->
-
         <div id="scrollingarticles" class="article1cable">
           <div class="holder">
           </div>
         </div>
         <div id="scrollingarticles" class="article1">
           <div class="brace">
+          </div>
+          <div class="articleimage">
+          </div>
+          <div class="articletext">
+            Headline of article <br />
+            blah blah blah blah blah blah blah blah blah blah blah blah<br />
+            <a href="www.google.com" target="_blank">Read more ></a>
           </div>
         </div>
         <div id ="scrollingarticles" class="article2cable">
@@ -313,6 +353,13 @@
         <div id="scrollingarticles" class="article2">
           <div class="brace">
           </div>
+          <div class="articleimage">
+          </div>
+          <div class="articletext">
+            Headline of article <br />
+            blah blah blah blah blah blah blah blah blah blah blah blah<br />
+            <a href="www.google.com" target="_blank">Read more ></a>
+          </div>
         </div>
         <div id ="scrollingarticles" class="article3cable">
           <div class="holder">
@@ -321,8 +368,18 @@
         <div id="scrollingarticles" class="article3">
           <div class="brace">
           </div>
+          <div class="articleimage">
+          </div>
+          <div class="articletext">
+            Headline of article <br />
+            blah blah blah blah blah blah blah blah blah blah blah blah<br />
+            <a href="www.google.com" target="_blank">Read more ></a>
+          </div>
         </div>
-
+      </div>
+      <div class="whitebottombar">
+      </div>
+      <div class="whitesidebar">
       </div>
     </div>
   </body>
