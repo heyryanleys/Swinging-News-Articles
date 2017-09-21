@@ -4,14 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-    #main{
+    .makescroll{
+      position: relative;
+      width: 1000px;
+      height: 2000px;
+      background-color: red;
+    }
+    .main{
       position: absolute;
       width: 1000px;
       height: 600px;
       background-color: blue;
     }
 
-    #whitebottombar{
+    .whitebottombar{
       position: absolute;
       top: 80%;
       width: 100%;
@@ -19,7 +25,7 @@
       background-color: green;
     }
 
-    #frame{
+    .frame{
       position: absolute;
       border: 2px solid white;
       left: 5%;
@@ -28,33 +34,33 @@
       height: 80%;
     }
 
-    #rightbar,
-    #leftbar{
+    .rightbar,
+    .leftbar{
       position: absolute;
       width: 5%;
       height: 100%;
       background-color: grey;
     }
 
-    #leftbar{
+    .leftbar{
       left: 5%;
     }
 
-    #rightbar{
+    .rightbar{
       left: 90%;
     }
 
-    #topbar{
+    .topbar{
       position: absolute;
       width: 100%;
       height: 5%;
       background-color: grey
     }
 
-    #leftlowerrightbrace,
-    #leftlowerleftbrace,
-    #rightlowerleftbrace,
-    #rightlowerrightbrace{
+    .leftlowerrightbrace,
+    .leftlowerleftbrace,
+    .rightlowerleftbrace,
+    .rightlowerrightbrace{
       position: absolute;
       width: 8%;
       height: 3%;
@@ -62,34 +68,34 @@
       top: 95%;
     }
 
-    #rightlowerleftbrace,
-    #leftlowerleftbrace{
+    .rightlowerleftbrace,
+    .leftlowerleftbrace{
       -ms-transform: rotate(-60deg); /* IE 9 */
       -webkit-transform: rotate(-60deg); /* Chrome, Safari, Opera */
       transform: rotate(-60deg);
     }
 
-    #rightlowerrightbrace,
-    #leftlowerrightbrace{
+    .rightlowerrightbrace,
+    .leftlowerrightbrace{
       -ms-transform: rotate(60deg); /* IE 9 */
       -webkit-transform: rotate(60deg); /* Chrome, Safari, Opera */
       transform: rotate(60deg);
     }
 
-    #leftlowerrightbrace{
+    .leftlowerrightbrace{
       left: 7%;
     }
 
-    #rightlowerleftbrace{
+    .rightlowerleftbrace{
       left: 85%;
     }
 
-    #rightlowerrightbrace{
+    .rightlowerrightbrace{
       left: 92%;
     }
 
-    #righttopbrace,
-    #lefttopbrace{
+    .righttopbrace,
+    .lefttopbrace{
       position: absolute;
       top: 5%;
       width: 9%;
@@ -98,14 +104,14 @@
 
     }
 
-    #lefttopbrace{
+    .lefttopbrace{
       left: 5.5%;
       -ms-transform: rotate(-50deg); /* IE 9 */
       -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
       transform: rotate(-50deg);
     }
 
-    #righttopbrace{
+    .righttopbrace{
       left:86%;
       -ms-transform: rotate(50deg); /* IE 9 */
       -webkit-transform: rotate(50deg); /* Chrome, Safari, Opera */
@@ -113,59 +119,102 @@
 
     }
 
-    #article1,
-    #article2,
-    #article3{
+    .article3before,
+    .article3after,
+    .article1,
+    .article2,
+    .article3{
       position: absolute;
       width: 20%;
       height: 50%;
-      top: 20%;
       background-color: pink;
     }
 
-    #article1{
+    .article1{
+      top: 20%;
       left: 15%;
+      display: none;
     }
 
-    #article2{
+    .article2{
+      top: 20%;
       left: 40%;
+      display: none;
     }
 
-    #article3{
+    .article3{
+      top: 20%;
       left: 65%;
     }
+
+    .article3before{
+      left: 0;
+      -ms-transform: rotate(30deg); /* IE 9 */
+      -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+      transform: rotate(30deg);
+    }
+
+    .article3before.flyin{
+      left: 90%;
+      top: 11%;
+      -ms-transform: rotate(-20deg); /* IE 9 */
+      -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+      transform: rotate(-20deg);
+    }
+
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script>
+      // Javascript functin to trigger animation when user reaches greycircle div //
+    $(document).ready(function() {
+      var controller = new ScrollMagic.Controller();
+      var ourScene = new ScrollMagic.Scene({
+          triggerElement: '.main'
+        })
+        .setClassToggle('#scrollingarticles', 'flyin') // add class to project 01
+        .addTo(controller);
+    });
+    </script>
   </head>
   <body>
-    <div id="main">
-      <div id="whitebottombar">
+    <div class="makescroll">
+    </div>
+    <div class="main">
+      <div class="whitebottombar">
       </div>
-      <div id="frame">
-        <div id="lefttopbrace">
+      <div class="frame">
+        <div id="scrollingarticles" class="lefttopbrace">
         </div>
-        <div id="righttopbrace">
+        <div id="scrollingarticles" class="righttopbrace">
         </div>
-        <div id="topbar">
+        <div id="scrollingarticles" class="topbar">
         </div>
-        <div id="leftlowerleftbrace">
+        <div id="scrollingarticles" class="leftlowerleftbrace">
         </div>
-        <div id="leftlowerrightbrace">
+        <div id="scrollingarticles" class="leftlowerrightbrace">
         </div>
-        <div id="rightlowerleftbrace">
+        <div id="scrollingarticles" class="rightlowerleftbrace">
         </div>
-        <div id="rightlowerrightbrace">
+        <div id="scrollingarticles" class="rightlowerrightbrace">
         </div>
-        <div id="leftbar">
+        <div id="scrollingarticles" class="leftbar">
         </div>
-        <div id="rightbar">
+        <div id="scrollingarticles" class="rightbar">
         </div>
           <!-- Content Starts -->
-        <div id="article1">
+        <div id="scrollingarticles" class="article3before">
         </div>
-        <div id="article2">
+        <div id="scrollingarticles" class="article1">
         </div>
-        <div id="article3">
+        <div id="scrollingarticles" class="article2">
         </div>
+
       </div>
     </div>
   </body>
