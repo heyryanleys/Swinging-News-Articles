@@ -118,9 +118,6 @@
       transform: rotate(50deg);
 
     }
-
-    .article3before,
-    .article3after,
     .article1,
     .article2,
     .article3{
@@ -142,27 +139,34 @@
       display: none;
     }
 
-    .article3{
+    .article3.flyin{
       top: 20%;
       left: 65%;
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
     }
 
-    .article3before{
-      left: 0;
-      -ms-transform: rotate(30deg); /* IE 9 */
-      -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
-      transform: rotate(30deg);
-      transition: all 3s
+    .article3{
+      left: -20%;
+      top: 20%;
+      -ms-transform: rotate(0deg); /* IE 9 */
+      -ms-transform-origin: 50% 50%; /* IE 9 */
+      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+      -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
+      transform: rotate(20deg);
+      transform-origin: 50% 50%;
+      transition: all 2s ease-out
     }
 
-    .article3before.flyin{
+  /*  .article3before.{
       left: 90%;
       top: 11%;
-      -ms-transform: rotate(-20deg); /* IE 9 */
-      -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+      -ms-transform: rotate(-20deg);
+      -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
-      
-    }
+      transform-origin: 0% 0%;
+
+    } */
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -210,11 +214,12 @@
         <div id="scrollingarticles" class="rightbar">
         </div>
           <!-- Content Starts -->
-        <div id="scrollingarticles" class="article3before">
-        </div>
+
         <div id="scrollingarticles" class="article1">
         </div>
         <div id="scrollingarticles" class="article2">
+        </div>
+        <div id="scrollingarticles" class="article3">
         </div>
 
       </div>
