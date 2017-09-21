@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    #main{
+      position: absolute;
+      width: 1000px;
+      height: 600px;
+      background-color: blue;
+    }
+
+    #whitebottombar{
+      position: absolute;
+      top: 80%;
+      width: 100%;
+      height: 20%;
+      background-color: green;
+    }
+
+    #frame{
+      position: absolute;
+      border: 2px solid white;
+      left: 5%;
+      bottom: 10%;
+      width: 90%;
+      height: 80%;
+    }
+
+    #rightbar,
+    #leftbar{
+      position: absolute;
+      width: 5%;
+      height: 100%;
+      background-color: grey;
+    }
+
+    #leftbar{
+      left: 5%;
+    }
+
+    #rightbar{
+      left: 90%;
+    }
+
+    #topbar{
+      position: absolute;
+      width: 100%;
+      height: 5%;
+      background-color: grey
+    }
+
+    #leftlowerrightbrace,
+    #leftlowerleftbrace,
+    #rightlowerleftbrace,
+    #rightlowerrightbrace{
+      position: absolute;
+      width: 8%;
+      height: 3%;
+      background-color: #5e5e5e;
+      top: 95%;
+    }
+
+    #rightlowerleftbrace,
+    #leftlowerleftbrace{
+      -ms-transform: rotate(-60deg); /* IE 9 */
+      -webkit-transform: rotate(-60deg); /* Chrome, Safari, Opera */
+      transform: rotate(-60deg);
+    }
+
+    #rightlowerrightbrace,
+    #leftlowerrightbrace{
+      -ms-transform: rotate(60deg); /* IE 9 */
+      -webkit-transform: rotate(60deg); /* Chrome, Safari, Opera */
+      transform: rotate(60deg);
+    }
+
+    #leftlowerrightbrace{
+      left: 7%;
+    }
+
+    #rightlowerleftbrace{
+      left: 85%;
+    }
+
+    #rightlowerrightbrace{
+      left: 92%;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="whitebottombar">
+      </div>
+      <div id="frame">
+        <div id="topbar">
+        </div>
+        <div id="leftlowerleftbrace">
+        </div>
+        <div id="leftlowerrightbrace">
+        </div>
+        <div id="rightlowerleftbrace">
+        </div>
+        <div id="rightlowerrightbrace">
+        </div>
+        <div id="leftbar">
+        </div>
+        <div id="rightbar">
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
