@@ -13,7 +13,7 @@
 
     .whitebottombar{
       position: absolute;
-      top: 90%;
+      top: 80%;
       width: 100%;
       height: 10%;
       background-color: white;
@@ -40,7 +40,7 @@
     .leftbar{
       position: absolute;
       width: 5%;
-      height: 100%;
+      height: 90%;
       background-color: grey;
     }
 
@@ -67,7 +67,7 @@
       width: 8%;
       height: 3%;
       background-color: #5e5e5e;
-      top: 95%;
+      top: 80%;
     }
 
     .rightlowerleftbrace,
@@ -137,13 +137,14 @@
       background-color: #E3E3E3;
     }
 
-    .article1:hover,
-    .article2:hover,
-    .article3:hover{
-      border: 2px solid #f58220;
-      transition: all 0s
+    .article1.flyin:hover,
+    .article2.flyin:hover,
+    .article3.flyin:hover{
+      outline: 2px solid #f58220;
+      top: 25%;
+      padding: 0px;
+      cursor: hand;
     }
-
 
     .article1.flyin{
       left: 15%;
@@ -159,7 +160,7 @@
       -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
       transform: rotate(20deg);
       transform-origin: 50% 50%;
-      transition: all 2s ease-out
+      transition: left 2s ease-out, transform 2s ease-out, top .5s;
     }
 
     .article2.flyin{
@@ -176,7 +177,7 @@
       -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
       transform: rotate(20deg);
       transform-origin: 50% 50%;
-      transition: all 2s ease-out
+      transition: left 2s ease-out, transform 2s ease-out, top .5s;
     }
 
     .article3.flyin{
@@ -193,7 +194,7 @@
       -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
       transform: rotate(20deg);
       transform-origin: 50% 50%;
-      transition: all 2s ease-out
+      transition: left 2s ease-out, transform 2s ease-out, top .5s;
     }
 
     .article3cable.flyin{
@@ -280,6 +281,12 @@
     .articletext a{
       color: #f58220;
     }
+    .sectionheadline{
+      margin-left:39%;
+      font-size: 30px;
+      font-weight: 600;
+      top: 4%;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
@@ -290,18 +297,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script>
       // Javascript functin to trigger animation when user reaches greycircle div //
-    $(document).ready(function() {
-      var controller = new ScrollMagic.Controller();
-      var ourScene = new ScrollMagic.Scene({
-          triggerElement: '.main'
-        })
-        .setClassToggle('#scrollingarticles', 'flyin') // add class to project 01
-        .addTo(controller);
-    });
+      $(document).ready(function() {
+        var controller = new ScrollMagic.Controller();
+        var ourScene = new ScrollMagic.Scene({
+            triggerElement: '.main'
+          })
+          .setClassToggle('#scrollingarticles', 'flyin') // add class to project 01
+          .reverse(false)
+          .addTo(controller);
+      });
     </script>
   </head>
   <body>
     <div class="main">
+      <div class="sectionheadline">
+        Career Resources
+      </div>
       <div class="frame">
         <div class="lefttopbrace">
         </div>
@@ -328,47 +339,53 @@
           <div class="holder">
           </div>
         </div>
-        <div id="scrollingarticles" class="article1">
+        <a href="https://www.linkedin.com/pulse/why-new-grads-should-consider-career-technology-sales-jay-singh" target="_blank">
+          <div id="scrollingarticles" class="article1">
           <div class="brace">
           </div>
           <div class="articleimage">
-            <img src="https://s26.postimg.org/fkq9h1fh5/croppedaritcleimage.png" width="100%" height="100%";/>
+            <img src="https://s26.postimg.org/fkq9h1fh5/croppedaritcleimage.png" max-width="100%" height="100%" />
           </div>
           <div class="articletext">
-            Why New Grads Should Consider a Career in Technology Sales <br />
+            <font style="color:black">Why New Grads Should Consider a Career in Tech Sales </font><br />
             <a href="www.google.com" target="_blank">Read more ></a>
           </div>
         </div>
+        </a>
         <div id ="scrollingarticles" class="article2cable">
           <div class="holder">
           </div>
         </div>
+        <a href="https://www.forbes.com/sites/erikaandersen/2014/06/03/please-dont-do-these-9-things-in-an-interview/" target="_blank">
         <div id="scrollingarticles" class="article2">
           <div class="brace">
           </div>
           <div class="articleimage">
+            <img src="https://s26.postimg.org/9sv770byx/interview.png" max-width="100%" height="100%" />
           </div>
           <div class="articletext">
-            Headline of article <br />
-            blah blah blah blah blah blah blah blah blah blah blah blah<br />
+            <font style="color:black">Please Don't Do These 9 Things In An Interview</font><br />
             <a href="www.google.com" target="_blank">Read more ></a>
           </div>
         </div>
+        </a>
         <div id ="scrollingarticles" class="article3cable">
           <div class="holder">
           </div>
         </div>
+        <a href="https://www.monster.com/career-advice/article/avoid-the-top-10-resume-mistakes" target="_blank">
         <div id="scrollingarticles" class="article3">
           <div class="brace">
           </div>
           <div class="articleimage">
+            <img src="https://s26.postimg.org/5dhdfhoyh/resume.png" max-wdith="100%" height="100%" />
           </div>
           <div class="articletext">
-            Headline of article <br />
-            blah blah blah blah blah blah blah blah blah blah blah blah<br />
+            <font style="color:black">The 10 Worst Resume Mistakes to Avoid</font><br />
             <a href="www.google.com" target="_blank">Read more ></a>
           </div>
         </div>
+        </a>
       </div>
       <div class="whitebottombar">
       </div>
