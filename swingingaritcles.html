@@ -11,6 +11,15 @@
       background-color: white;
     }
 
+    .whitetopbar{
+      position: absolute;
+      top: -2%;
+      left:-10%;
+      height: 12%;
+      width: 110%;
+      background-color: white;
+    }
+
     .whitebottombar{
       position: absolute;
       top: 80%;
@@ -24,6 +33,14 @@
       width: 15%;
       left: -10%;
       height: 100%;
+      background-color: white;
+    }
+    .whitesidebar2{
+      position: absolute;
+      top: 14%;
+      width: 4.5%;
+      left: 5%;
+      height: 9%;
       background-color: white;
     }
 
@@ -319,6 +336,56 @@
       border-radius: 100px;
     }
 
+    .cable1{
+      position: absolute;
+      background-color: transparent;
+      border: 5px solid black;
+      border-radius: 50%;
+      width: 15%;
+      height: 28%;
+      top: -15%;
+      margin-left: -70%;
+      transition: all 2s ease-out
+    }
+
+    .cable1.flyin{
+      position: absolute;
+      margin-left: 10%;
+    }
+
+    .cable2{
+      position: absolute;
+      background-color: transparent;
+      border: 5px solid black;
+      border-radius: 50%;
+      width: 15%;
+      height: 28%;
+      top: -15%;
+      margin-left: -47%;
+      transition: all 2s ease-out
+    }
+
+    .cable2.flyin{
+      position: absolute;
+      margin-left: 35%;
+    }
+
+    .cable3{
+      position: absolute;
+      background-color: transparent;
+      border: 5px solid black;
+      border-radius: 50%;
+      width: 15%;
+      height: 28%;
+      top: -15%;
+      margin-left: -22%;
+      transition: all 2s ease-out
+    }
+
+    .cable3.flyin{
+      position: absolute;
+      margin-left: 60%;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
@@ -346,6 +413,12 @@
         Career Resources
       </div>
       <div class="frame">
+        <div id="scrollingarticles" class="cable1">
+        </div>
+        <div id="scrollingarticles" class="cable2">
+        </div>
+        <div id="scrollingarticles" class="cable3">
+        </div>
         <div class="lefttopbrace">
         </div>
         <div class="righttopbrace">
@@ -425,9 +498,13 @@
         </div>
         </a>
       </div>
+      <div class="whitetopbar">
+      </div>
       <div class="whitebottombar">
       </div>
       <div class="whitesidebar">
+      </div>
+      <div class="whitesidebar2">
       </div>
     </div>
   </body>
