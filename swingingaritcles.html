@@ -4,25 +4,34 @@
     <meta charset="utf-8">
     <title></title>
     <style>
+    a[name*=Section_16]+.einspaltig {
+      height: 500px;
+    }
+
+    a[name*=Section_16]+.einspaltig div {
+      position: absolute;
+    }
+
     .main{
       position: absolute;
-      width: 1000px;
+      max-width: 1000px;
       height: 600px;
       background-color: white;
+      margin-left:7%;
     }
 
     .whitebottombar{
       position: absolute;
-      top: 90%;
-      width: 100%;
+      top: 80%;
+      max-width: 100%;
       height: 10%;
       background-color: white;
     }
 
     .whitesidebar{
       position: absolute;
-      width: 15%;
-      left: -10%;
+      max-width: 15%;
+      margin-left: -10% !important;
       height: 100%;
       background-color: white;
     }
@@ -30,31 +39,31 @@
     .frame{
       position: absolute;
       border: 0px solid white;
-      left: 5%;
+      margin-left: 5% !important;
       bottom: 10%;
-      width: 90%;
+      max-width: 90%;
       height: 80%;
     }
 
     .rightbar,
     .leftbar{
       position: absolute;
-      width: 5%;
-      height: 100%;
+      max-width: 5%;
+      height: 90%;
       background-color: grey;
     }
 
     .leftbar{
-      left: 5%;
+      margin-left: 5% !important;
     }
 
     .rightbar{
-      left: 90%;
+      margin-left: 90% !important;
     }
 
     .topbar{
       position: absolute;
-      width: 100%;
+      max-width: 100%;
       height: 5%;
       background-color: grey;
     }
@@ -64,10 +73,10 @@
     .rightlowerleftbrace,
     .rightlowerrightbrace{
       position: absolute;
-      width: 8%;
+      max-width: 8%;
       height: 3%;
       background-color: #5e5e5e;
-      top: 95%;
+      top: 80%;
     }
 
     .rightlowerleftbrace,
@@ -85,36 +94,36 @@
     }
 
     .leftlowerrightbrace{
-      left: 7%;
+      margin-left: 7% !important;
     }
 
     .rightlowerleftbrace{
-      left: 85%;
+      margin-left: 85% !important;
     }
 
     .rightlowerrightbrace{
-      left: 92%;
+      margin-left: 92% !important;
     }
 
     .righttopbrace,
     .lefttopbrace{
       position: absolute;
       top: 5%;
-      width: 9%;
+      max-width: 9%;
       height: 8%;
       background-color: #5e5e5e;
 
     }
 
     .lefttopbrace{
-      left: 5.5%;
+      margin-left: 5.5% !important;
       -ms-transform: rotate(-50deg); /* IE 9 */
       -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
       transform: rotate(-50deg);
     }
 
     .righttopbrace{
-      left:86%;
+      margin-left:86% !important;
       -ms-transform: rotate(50deg); /* IE 9 */
       -webkit-transform: rotate(50deg); /* Chrome, Safari, Opera */
       transform: rotate(50deg);
@@ -122,7 +131,7 @@
 
     .chain{
       position: absolute;
-      width: 100%;
+      max-width: 100%;
       height: 1%;
       top: 2%;
       background-color: #f4ac70;
@@ -132,7 +141,7 @@
     .article2,
     .article3{
       position: absolute;
-      width: 20%;
+      max-width: 20%;
       height: 50%;
       background-color: #E3E3E3;
     }
@@ -146,13 +155,13 @@
 
 
     .article1.flyin{
-      left: 15%;
+      margin-left: 15% !important;
       transform: rotate(0deg);
     }
 
     .article1{
       top: 20%;
-      left: -70%;
+      margin-left: -70% !important;
       -ms-transform: rotate(0deg); /* IE 9 */
       -ms-transform-origin: 50% 50%; /* IE 9 */
       -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
@@ -163,12 +172,12 @@
     }
 
     .article2.flyin{
-      left: 40%;
+      margin-left: 40% !important;
       transform: rotate(0deg);
     }
 
     .article2{
-      left: -45%;
+      margin-left: -45% !important;
       top: 20%;
       -ms-transform: rotate(0deg); /* IE 9 */
       -ms-transform-origin: 50% 50%; /* IE 9 */
@@ -180,12 +189,12 @@
     }
 
     .article3.flyin{
-      left: 65%;
+      margin-left: 65% !important;
       transform: rotate(0deg);
     }
 
     .article3{
-      left: -20%;
+      margin-left: -20% !important;
       top: 20%;
       -ms-transform: rotate(0deg); /* IE 9 */
       -ms-transform-origin: 50% 50%; /* IE 9 */
@@ -198,14 +207,14 @@
 
     .article3cable.flyin{
       position: absolute;
-      left: 75%;
+      margin-left: 75% !important;
     }
 
     .article3cable{
       position: absolute;
       top: 2%;
-      left: -7%;
-      width: 1%;
+      margin-left: -7% !important;
+      max-width: 1%;
       height: 40%;
       background-color: black;
       transition: all 2s ease-out
@@ -213,14 +222,14 @@
 
     .article2cable.flyin{
       position: absolute;
-      left: 50%;
+      margin-left: 50% !important;
     }
 
     .article2cable{
       position: absolute;
       top: 2%;
-      left: -32%;
-      width: 1%;
+      margin-left: -32% !important;
+      max-width: 1%;
       height: 40%;
       background-color: black;
       transition: all 2s ease-out
@@ -228,14 +237,14 @@
 
     .article1cable.flyin{
       position: absolute;
-      left: 25%;
+      margin-left: 25% !important;
     }
 
     .article1cable{
       position: absolute;
       top: 2%;
-      left: -57%;
-      width: 1%;
+      margin-left: -57% !important;
+      max-width: 1%;
       height: 40%;
       background-color: black;
       transition: all 2s ease-out
@@ -243,18 +252,19 @@
 
     .brace{
       position: absolute;
-      width: 40%;
+      max-width: 40%;
       height: 5%;
       background-color: black;
-      left: 30%;
+      margin-left: 30% !important;
     }
 
     .holder{
       position: absolute;
-      width: 200%;
+      max-width: 200%;
+      min-width: 200%;
       height: 8%;
       top: -2%;
-      left: -50%;
+      margin-left: -50% !important;
       background-color: #232323;
       border-radius: 25%;
     }
@@ -262,16 +272,16 @@
     .articleimage{
       position: absolute;
       background-color: #5e5e5e;
-      width: 85%;
-      left: 7.5%;
+      max-width: 85%;
+      margin-left: 7.5% !important;
       height: 40%;
       top: 10%;
     }
 
     .articletext{
       position: absolute;
-      width: 85%;
-      left: 7.5%;
+      max-width: 85%;
+      margin-left: 7.5% !important;
       height: 40%;
       top: 52%;
       font-weight: 600;
@@ -332,7 +342,7 @@
           <div class="brace">
           </div>
           <div class="articleimage">
-            <img src="https://s26.postimg.org/fkq9h1fh5/croppedaritcleimage.png" width="100%" height="100%";/>
+            <img src="https://s26.postimg.org/fkq9h1fh5/croppedaritcleimage.png" max-width="100%" height="100%";/>
           </div>
           <div class="articletext">
             Why New Grads Should Consider a Career in Technology Sales <br />
