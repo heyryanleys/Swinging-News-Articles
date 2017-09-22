@@ -1,389 +1,383 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style>
-    a[name*=Section_16]+.einspaltig {
-      height: 500px;
-    }
+<style>
+a[name*=Section_16]+.einspaltig {
+  height: 500px;
+}
 
-    a[name*=Section_16]+.einspaltig div {
-      position: absolute;
-    }
+a[name*=Section_16]+.einspaltig div {
+  position: absolute;
+}
 
-    .main{
-      position: absolute;
-      max-width: 1000px;
-      height: 600px;
-      background-color: white;
-      margin-left:7%;
-    }
+.main{
+  position: absolute;
+  max-width: 1000px;
+  height: 600px;
+  background-color: white;
+  margin-left:7%;
+}
 
-    .whitebottombar{
-      position: absolute;
-      top: 80%;
-      max-width: 100%;
-      height: 10%;
-      background-color: white;
-    }
+.whitebottombar{
+  position: absolute;
+  top: 80%;
+  max-width: 100%;
+  height: 10%;
+  background-color: white;
+}
 
-    .whitesidebar{
-      position: absolute;
-      max-width: 15%;
-      margin-left: -10% !important;
-      height: 100%;
-      background-color: white;
-    }
+.whitesidebar{
+  position: absolute;
+  max-width: 15%;
+  margin-left: -10% !important;
+  height: 100%;
+  background-color: white;
+}
 
-    .frame{
-      position: absolute;
-      border: 0px solid white;
-      margin-left: 5% !important;
-      bottom: 10%;
-      max-width: 90%;
-      height: 80%;
-    }
+.frame{
+  position: absolute;
+  border: 0px solid white;
+  margin-left: 5% !important;
+  bottom: 10%;
+  max-width: 90%;
+  height: 80%;
+}
 
-    .rightbar,
-    .leftbar{
-      position: absolute;
-      max-width: 5%;
-      height: 90%;
-      background-color: grey;
-    }
+.rightbar,
+.leftbar{
+  position: absolute;
+  max-width: 5%;
+  height: 90%;
+  background-color: grey;
+}
 
-    .leftbar{
-      margin-left: 5% !important;
-    }
+.leftbar{
+  margin-left: 5% !important;
+}
 
-    .rightbar{
-      margin-left: 90% !important;
-    }
+.rightbar{
+  margin-left: 90% !important;
+}
 
-    .topbar{
-      position: absolute;
-      max-width: 100%;
-      height: 5%;
-      background-color: grey;
-    }
+.topbar{
+  position: absolute;
+  max-width: 100%;
+  height: 5%;
+  background-color: grey;
+}
 
-    .leftlowerrightbrace,
-    .leftlowerleftbrace,
-    .rightlowerleftbrace,
-    .rightlowerrightbrace{
-      position: absolute;
-      max-width: 8%;
-      height: 3%;
-      background-color: #5e5e5e;
-      top: 80%;
-    }
+.leftlowerrightbrace,
+.leftlowerleftbrace,
+.rightlowerleftbrace,
+.rightlowerrightbrace{
+  position: absolute;
+  max-width: 8%;
+  height: 3%;
+  background-color: #5e5e5e;
+  top: 80%;
+}
 
-    .rightlowerleftbrace,
-    .leftlowerleftbrace{
-      -ms-transform: rotate(-60deg); /* IE 9 */
-      -webkit-transform: rotate(-60deg); /* Chrome, Safari, Opera */
-      transform: rotate(-60deg);
-    }
+.rightlowerleftbrace,
+.leftlowerleftbrace{
+  -ms-transform: rotate(-60deg); /* IE 9 */
+  -webkit-transform: rotate(-60deg); /* Chrome, Safari, Opera */
+  transform: rotate(-60deg);
+}
 
-    .rightlowerrightbrace,
-    .leftlowerrightbrace{
-      -ms-transform: rotate(60deg); /* IE 9 */
-      -webkit-transform: rotate(60deg); /* Chrome, Safari, Opera */
-      transform: rotate(60deg);
-    }
+.rightlowerrightbrace,
+.leftlowerrightbrace{
+  -ms-transform: rotate(60deg); /* IE 9 */
+  -webkit-transform: rotate(60deg); /* Chrome, Safari, Opera */
+  transform: rotate(60deg);
+}
 
-    .leftlowerrightbrace{
-      margin-left: 7% !important;
-    }
+.leftlowerrightbrace{
+  margin-left: 7% !important;
+}
 
-    .rightlowerleftbrace{
-      margin-left: 85% !important;
-    }
+.rightlowerleftbrace{
+  margin-left: 85% !important;
+}
 
-    .rightlowerrightbrace{
-      margin-left: 92% !important;
-    }
+.rightlowerrightbrace{
+  margin-left: 92% !important;
+}
 
-    .righttopbrace,
-    .lefttopbrace{
-      position: absolute;
-      top: 5%;
-      max-width: 9%;
-      height: 8%;
-      background-color: #5e5e5e;
+.righttopbrace,
+.lefttopbrace{
+  position: absolute;
+  top: 5%;
+  max-width: 9%;
+  height: 8%;
+  background-color: #5e5e5e;
 
-    }
+}
 
-    .lefttopbrace{
-      margin-left: 5.5% !important;
-      -ms-transform: rotate(-50deg); /* IE 9 */
-      -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
-      transform: rotate(-50deg);
-    }
+.lefttopbrace{
+  margin-left: 5.5% !important;
+  -ms-transform: rotate(-50deg); /* IE 9 */
+  -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
+  transform: rotate(-50deg);
+}
 
-    .righttopbrace{
-      margin-left:86% !important;
-      -ms-transform: rotate(50deg); /* IE 9 */
-      -webkit-transform: rotate(50deg); /* Chrome, Safari, Opera */
-      transform: rotate(50deg);
-    }
+.righttopbrace{
+  margin-left:86% !important;
+  -ms-transform: rotate(50deg); /* IE 9 */
+  -webkit-transform: rotate(50deg); /* Chrome, Safari, Opera */
+  transform: rotate(50deg);
+}
 
-    .chain{
-      position: absolute;
-      max-width: 100%;
-      height: 1%;
-      top: 2%;
-      background-color: #f4ac70;
-    }
+.chain{
+  position: absolute;
+  max-width: 100%;
+  height: 1%;
+  top: 2%;
+  background-color: #f4ac70;
+}
 
-    .article1,
-    .article2,
-    .article3{
-      position: absolute;
-      max-width: 20%;
-      height: 50%;
-      background-color: #E3E3E3;
-    }
+.article1,
+.article2,
+.article3{
+  position: absolute;
+  max-width: 20%;
+  height: 50%;
+  background-color: #E3E3E3;
+}
 
-    .article1:hover,
-    .article2:hover,
-    .article3:hover{
-      border: 2px solid #f58220;
-      transition: all 0s
-    }
+.article1.flyin:hover,
+.article2.flyin:hover,
+.article3.flyin:hover{
+  outline: 2px solid #f58220;
+  transition: top .5s;
+  top: 25%;
+  padding: 0px;
+}
 
 
-    .article1.flyin{
-      margin-left: 15% !important;
-      transform: rotate(0deg);
-    }
+.article1.flyin{
+  margin-left: 15% !important;
+  transform: rotate(0deg);
+}
 
-    .article1{
-      top: 20%;
-      margin-left: -70% !important;
-      -ms-transform: rotate(0deg); /* IE 9 */
-      -ms-transform-origin: 50% 50%; /* IE 9 */
-      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-      -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
-      transform: rotate(20deg);
-      transform-origin: 50% 50%;
-      transition: all 2s ease-out
-    }
+.article1{
+  top: 20%;
+  margin-left: -70% !important;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -ms-transform-origin: 50% 50%; /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
+  transform: rotate(20deg);
+  transform-origin: 50% 50%;
+  transition: margin 2s ease-out, transform 2s ease-out, top .5s;
+}
 
-    .article2.flyin{
-      margin-left: 40% !important;
-      transform: rotate(0deg);
-    }
+.article2.flyin{
+  margin-left: 40% !important;
+  transform: rotate(0deg);
+}
 
-    .article2{
-      margin-left: -45% !important;
-      top: 20%;
-      -ms-transform: rotate(0deg); /* IE 9 */
-      -ms-transform-origin: 50% 50%; /* IE 9 */
-      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-      -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
-      transform: rotate(20deg);
-      transform-origin: 50% 50%;
-      transition: all 2s ease-out
-    }
+.article2{
+  margin-left: -45% !important;
+  top: 20%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -ms-transform-origin: 50% 50%; /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
+  transform: rotate(20deg);
+  transform-origin: 50% 50%;
+  transition: margin 2s ease-out, transform 2s ease-out, top .5s;
+}
 
-    .article3.flyin{
-      margin-left: 65% !important;
-      transform: rotate(0deg);
-    }
+.article3.flyin{
+  margin-left: 65% !important;
+  transform: rotate(0deg);
+}
 
-    .article3{
-      margin-left: -20% !important;
-      top: 20%;
-      -ms-transform: rotate(0deg); /* IE 9 */
-      -ms-transform-origin: 50% 50%; /* IE 9 */
-      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-      -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
-      transform: rotate(20deg);
-      transform-origin: 50% 50%;
-      transition: all 2s ease-out
-    }
+.article3{
+  margin-left: -20% !important;
+  top: 20%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -ms-transform-origin: 50% 50%; /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  -webkit-transform-origin: 50% 50%; /* Chrome, Safari Opera */
+  transform: rotate(20deg);
+  transform-origin: 50% 50%;
+  transition: margin 2s ease-out, transform 2s ease-out, top .5s;
+}
 
-    .article3cable.flyin{
-      position: absolute;
-      margin-left: 75% !important;
-    }
+.article3cable.flyin{
+  position: absolute;
+  margin-left: 75% !important;
+}
 
-    .article3cable{
-      position: absolute;
-      top: 2%;
-      margin-left: -7% !important;
-      max-width: 1%;
-      height: 40%;
-      background-color: black;
-      transition: all 2s ease-out
-    }
+.article3cable{
+  position: absolute;
+  top: 2%;
+  margin-left: -7% !important;
+  max-width: 1%;
+  height: 40%;
+  background-color: black;
+  transition: all 2s ease-out
+}
 
-    .article2cable.flyin{
-      position: absolute;
-      margin-left: 50% !important;
-    }
+.article2cable.flyin{
+  position: absolute;
+  margin-left: 50% !important;
+}
 
-    .article2cable{
-      position: absolute;
-      top: 2%;
-      margin-left: -32% !important;
-      max-width: 1%;
-      height: 40%;
-      background-color: black;
-      transition: all 2s ease-out
-    }
+.article2cable{
+  position: absolute;
+  top: 2%;
+  margin-left: -32% !important;
+  max-width: 1%;
+  height: 40%;
+  background-color: black;
+  transition: all 2s ease-out
+}
 
-    .article1cable.flyin{
-      position: absolute;
-      margin-left: 25% !important;
-    }
+.article1cable.flyin{
+  position: absolute;
+  margin-left: 25% !important;
+}
 
-    .article1cable{
-      position: absolute;
-      top: 2%;
-      margin-left: -57% !important;
-      max-width: 1%;
-      height: 40%;
-      background-color: black;
-      transition: all 2s ease-out
-    }
+.article1cable{
+  position: absolute;
+  top: 2%;
+  margin-left: -57% !important;
+  max-width: 1%;
+  height: 40%;
+  background-color: black;
+  transition: all 2s ease-out
+}
 
-    .brace{
-      position: absolute;
-      max-width: 40%;
-      height: 5%;
-      background-color: black;
-      margin-left: 30% !important;
-    }
+.brace{
+  position: absolute;
+  max-width: 40%;
+  height: 5%;
+  background-color: black;
+  margin-left: 30% !important;
+}
 
-    .holder{
-      position: absolute;
-      max-width: 200%;
-      min-width: 200%;
-      height: 8%;
-      top: -2%;
-      margin-left: -50% !important;
-      background-color: #232323;
-      border-radius: 25%;
-    }
+.holder{
+  position: absolute;
+  max-width: 200%;
+  min-width: 200%;
+  height: 8%;
+  top: -2%;
+  margin-left: -50% !important;
+  background-color: #232323;
+  border-radius: 25%;
+}
 
-    .articleimage{
-      position: absolute;
-      background-color: #5e5e5e;
-      max-width: 85%;
-      margin-left: 7.5% !important;
-      height: 40%;
-      top: 10%;
-    }
+.articleimage{
+  position: absolute;
+  background-color: #5e5e5e;
+  max-width: 85%;
+  margin-left: 7.5% !important;
+  height: 40%;
+  top: 10%;
+}
 
-    .articletext{
-      position: absolute;
-      max-width: 85%;
-      margin-left: 7.5% !important;
-      height: 40%;
-      top: 52%;
-      font-weight: 600;
-    }
+.articletext{
+  position: absolute;
+  max-width: 85%;
+  margin-left: 7.5% !important;
+  height: 40%;
+  top: 52%;
+  font-weight: 600;
+}
 
-    .articletext a{
-      color: #f58220;
-    }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
+.articletext a{
+  color: #f58220;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+</script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-    <script>
-      // Javascript functin to trigger animation when user reaches greycircle div //
-    $(document).ready(function() {
-      var controller = new ScrollMagic.Controller();
-      var ourScene = new ScrollMagic.Scene({
-          triggerElement: '.main'
-        })
-        .setClassToggle('#scrollingarticles', 'flyin') // add class to project 01
-        .addTo(controller);
-    });
-    </script>
-  </head>
-  <body>
-    <div class="main">
-      <div class="frame">
-        <div class="lefttopbrace">
-        </div>
-        <div class="righttopbrace">
-        </div>
-        <div class="topbar">
-        </div>
-        <div class="leftlowerleftbrace">
-        </div>
-        <div class="leftlowerrightbrace">
-        </div>
-        <div class="rightlowerleftbrace">
-        </div>
-        <div class="rightlowerrightbrace">
-        </div>
-        <div class="leftbar">
-        </div>
-        <div class="rightbar">
-        </div>
-        <div class="chain">
-        </div>
-          <!-- Content Starts -->
-        <div id="scrollingarticles" class="article1cable">
-          <div class="holder">
-          </div>
-        </div>
-        <div id="scrollingarticles" class="article1">
-          <div class="brace">
-          </div>
-          <div class="articleimage">
-            <img src="https://s26.postimg.org/fkq9h1fh5/croppedaritcleimage.png" max-width="100%" height="100%";/>
-          </div>
-          <div class="articletext">
-            Why New Grads Should Consider a Career in Technology Sales <br />
-            <a href="www.google.com" target="_blank">Read more ></a>
-          </div>
-        </div>
-        <div id ="scrollingarticles" class="article2cable">
-          <div class="holder">
-          </div>
-        </div>
-        <div id="scrollingarticles" class="article2">
-          <div class="brace">
-          </div>
-          <div class="articleimage">
-          </div>
-          <div class="articletext">
-            Headline of article <br />
-            blah blah blah blah blah blah blah blah blah blah blah blah<br />
-            <a href="www.google.com" target="_blank">Read more ></a>
-          </div>
-        </div>
-        <div id ="scrollingarticles" class="article3cable">
-          <div class="holder">
-          </div>
-        </div>
-        <div id="scrollingarticles" class="article3">
-          <div class="brace">
-          </div>
-          <div class="articleimage">
-          </div>
-          <div class="articletext">
-            Headline of article <br />
-            blah blah blah blah blah blah blah blah blah blah blah blah<br />
-            <a href="www.google.com" target="_blank">Read more ></a>
-          </div>
-        </div>
-      </div>
-      <div class="whitebottombar">
-      </div>
-      <div class="whitesidebar">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script>
+  // Javascript functin to trigger animation when user reaches greycircle div //
+$(document).ready(function() {
+  var controller = new ScrollMagic.Controller();
+  var ourScene = new ScrollMagic.Scene({
+      triggerElement: '.main'
+    })
+    .setClassToggle('#scrollingarticles', 'flyin') // add class to project 01
+    .addTo(controller);
+});
+</script>
+<div class="main">
+  <div class="frame">
+    <div class="lefttopbrace">
+    </div>
+    <div class="righttopbrace">
+    </div>
+    <div class="topbar">
+    </div>
+    <div class="leftlowerleftbrace">
+    </div>
+    <div class="leftlowerrightbrace">
+    </div>
+    <div class="rightlowerleftbrace">
+    </div>
+    <div class="rightlowerrightbrace">
+    </div>
+    <div class="leftbar">
+    </div>
+    <div class="rightbar">
+    </div>
+    <div class="chain">
+    </div>
+      <!-- Content Starts -->
+    <div id="scrollingarticles" class="article1cable">
+      <div class="holder">
       </div>
     </div>
-  </body>
-</html>
+    <div id="scrollingarticles" class="article1">
+      <div class="brace">
+      </div>
+      <div class="articleimage">
+        <img src="https://s26.postimg.org/fkq9h1fh5/croppedaritcleimage.png" max-width="100%" height="100%" />
+      </div>
+      <div class="articletext">
+        Why New Grads Should Consider a Career in Technology Sales <br />
+        <a href="www.google.com" target="_blank">Read more ></a>
+      </div>
+    </div>
+    <div id ="scrollingarticles" class="article2cable">
+      <div class="holder">
+      </div>
+    </div>
+    <div id="scrollingarticles" class="article2">
+      <div class="brace">
+      </div>
+      <div class="articleimage">
+        <img src="https://s26.postimg.org/9sv770byx/interview.png" max-width="100%" height="100%" />
+      </div>
+      <div class="articletext">
+        Please Don't Do These 9 Things In An Interview<br />
+        <a href="www.google.com" target="_blank">Read more ></a>
+      </div>
+    </div>
+    <div id ="scrollingarticles" class="article3cable">
+      <div class="holder">
+      </div>
+    </div>
+    <div id="scrollingarticles" class="article3">
+      <div class="brace">
+      </div>
+      <div class="articleimage">
+        <img src="https://s26.postimg.org/5dhdfhoyh/resume.png" max-wdith="100%" height="100%" />
+      </div>
+      <div class="articletext">
+        The 10 worst resume mistakes to avoid
+        <br />
+        <a href="www.google.com" target="_blank">Read more ></a>
+      </div>
+    </div>
+  </div>
+  <div class="whitebottombar">
+  </div>
+  <div class="whitesidebar">
+  </div>
+</div>
